@@ -1,0 +1,213 @@
+.product {
+    padding: 80px 0;
+    color: var(--main-color);
+    background-color: var(--main-bg-color);
+}
+.product:nth-child(3n) {
+    background-color: var(--one-color);
+}
+.product:nth-child(3n + 1) {
+    background-color: var(--two-color);
+}
+.product:nth-child(3n + 2) {
+    background-color: var(--three-color);
+}
+
+.product__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+/* Разварот контейнера */
+.product:nth-child(even) .product__container {
+    flex-direction: row-reverse;
+
+}
+.product__content {
+    padding-top: 56px;
+    max-width: 520px;
+     
+}
+.product__title {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 110%; /* 77px */
+    letter-spacing: 0.7px;
+    margin-bottom: 30px;
+}
+.product__features {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 130%; /* 23.4px */
+    letter-spacing: 0.72px;
+    margin-bottom: 50px;
+}
+.product__discription {
+    font-size: 24px;
+    line-height: 140%; /* 33.6px */
+    letter-spacing: 0.96px;
+    margin-bottom: 70px;
+}
+.product__button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+.product__button {
+    display: block;
+    padding: 14px 36px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 130%; /* 23.4px */
+    letter-spacing: 0.72px;
+    color: var(--main-color);
+    background-color: transparent;
+    }
+.product__button-order {
+    background-color: var(--second-bg-color);
+}
+.product__button-more {
+    border-color: var(--second-bg-color);
+}
+.product__button:hover {
+    background-color: var(--main-color);
+    border-color: var(--main-colo);
+    color: var(--main-bg-color);
+}
+.product__button:active {
+    background-color: var(--second-bg-color);
+    border-color: var(--second-bg-color);
+    color: var(--main-colo);
+}
+.product__button_order:focus {
+    outline: 2px solid var(--second-color);
+    background-color: transparent;
+
+}
+.product__button_more:focus {
+    outline-color: var(--main-colo);
+}
+.product__picture {
+    width: calc(50% - 15px);
+    border-radius: 16px;
+    /* Что бы картинка не искажалась */
+    object-fit: cover;
+
+}
+@media (max-width: 1440px) {
+    .product__content {
+        padding-top: 40px;
+        max-width: 460px;
+    }
+    .product__title {
+        font-style: 60px;
+    }
+    .product__discription {
+        font-style: 22px;
+    }
+}
+@media (max-width: 12000px) {
+    .product {
+        padding: 60px 0;
+    }
+    .product__content {
+        padding-top: 24px;
+        max-width: 380px;
+    }
+    .product__title {
+        font-style: 50px;
+        margin-bottom: 20px;
+    }
+    .product__features {
+        font-style: 16px;
+        margin-bottom: 30px;
+    }
+    .product__discription {
+        font-style: 20px;
+        margin-bottom: 50px;
+    }
+    .product__button-wrapper {
+        gap: 25px;
+    }
+    .product__button {
+        font-style: 16px;
+        border-radius: 8px;
+        padding: 12px 30px;
+    }
+}
+@media (max-width: 1000px) {
+    .product {
+        padding: 50px 0;
+    }
+    .product__content {
+        max-width: 330px;
+    }
+    .product__title {
+        font-style: 40px;
+    }
+    .product__features {
+        font-style: 14px;
+    }
+    .product__discription {
+        font-style: 16px;
+        margin-bottom: 40px;
+    }
+    .product__button-wrapper {
+        gap: 20px;
+    }
+    .product__button {
+        font-style: 14px;
+        border-radius: 6px;
+        padding: 8px 20px;
+    }
+}
+@media (max-width: 760px) {
+    .product {
+        padding: 20px 0;
+    }
+    .product__content {
+        max-width: 330px;
+    }
+    .product__title {
+        font-style: 30px;
+    }
+    .product__features {
+        margin-bottom: 20px;
+    }
+    .product__discription {
+        margin-bottom: 30px;
+    }
+    .product__button-wrapper {
+        gap: 20px;
+    }
+}
+@media (max-width: 580px) {
+    .product:nth-child(even) .product__container, .product__container {
+        flex-direction: column-reverse;
+    }
+    .product__container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+    .product__picture {
+        width: 100%;
+    }
+    .product__title {
+        font-style: 28px;
+        margin-bottom: 10px;
+    }
+    .product__features {
+        margin-bottom: 12px;
+    }
+    .product__discription {
+        margin-bottom: 14px;
+    }
+    .product__button {
+        font-style: 12px;
+        padding: 5px 14px;
+    }
+}
+
